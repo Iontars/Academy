@@ -1,10 +1,10 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <string>
 #include <stdlib.h>
 #include <time.h>
 using namespace std;
 int tuskCounter;
-#define Tusk "\t Здача " + to_string(tuskCounter) + ": "
+#define Tusk "\t Р—РґР°С‡Р° " + to_string(tuskCounter) + ": "
 int const globalSize = 5;
 void TuskCounter();
 void Message(int value);
@@ -62,35 +62,35 @@ void Message(int value)
     switch (value)
     {
     case 1:
-        cout << Tusk + "Одномерный Массив заполнен" << endl; break;
+        cout << Tusk + "РћРґРЅРѕРјРµСЂРЅС‹Р№ РњР°СЃСЃРёРІ Р·Р°РїРѕР»РЅРµРЅ" << endl; break;
     case 2:
-        cout << Tusk + "Двумерный Массив заполнен" << endl; break;
+        cout << Tusk + "Р”РІСѓРјРµСЂРЅС‹Р№ РњР°СЃСЃРёРІ Р·Р°РїРѕР»РЅРµРЅ" << endl; break;
     case 3:
-        cout << Tusk + "Вывод Одномерного массива на экран" << endl; break;
+        cout << Tusk + "Р’С‹РІРѕРґ РћРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ" << endl; break;
     case 4:
-        cout << Tusk + "Вывод Двумерного массива на экран" << endl; break;
+        cout << Tusk + "Р’С‹РІРѕРґ Р”РІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ" << endl; break;
     case 5:
-        cout << Tusk + "Сумма элементов Одномерного массива" << endl; break;
+        cout << Tusk + "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ РћРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°" << endl; break;
     case 6:
-        cout << Tusk + "Сумма элементов Двумерного массива" << endl; break;
+        cout << Tusk + "РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ Р”РІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°" << endl; break;
     case 7:
-        cout << Tusk + "Среднее арифметическое элементов Одномерного массива" << endl; break;
+        cout << Tusk + "РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РћРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°" << endl; break;
     case 8:
-        cout << Tusk + "Среднее арифметическое элементов Двумерного массива" << endl; break;
+        cout << Tusk + "РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ Р”РІСѓРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР°" << endl; break;
     case 9:
-        cout << Tusk + "Минимальное значение в Одномерном массиве" << endl; break;
+        cout << Tusk + "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РћРґРЅРѕРјРµСЂРЅРѕРј РјР°СЃСЃРёРІРµ" << endl; break;
     case 10:
-        cout << Tusk + "Минимальное значение в Двумерном массиве" << endl; break;
+        cout << Tusk + "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ Р”РІСѓРјРµСЂРЅРѕРј РјР°СЃСЃРёРІРµ" << endl; break;
     case 11:
-        cout << Tusk + "Максимальное значение в Одномерном массиве" << endl; break;
+        cout << Tusk + "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РћРґРЅРѕРјРµСЂРЅРѕРј РјР°СЃСЃРёРІРµ" << endl; break;
     case 12:
-        cout << Tusk + "Максимальное значение в Двумерном массиве" << endl; break;
+        cout << Tusk + "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ Р”РІСѓРјРµСЂРЅРѕРј РјР°СЃСЃРёРІРµ" << endl; break;
     case 13:
-        cout << Tusk + "Сортировка Одномерного массива в порядке возрастания, при помощи алгоритма выбора" << endl; break;
+        cout << Tusk + "РЎРѕСЂС‚РёСЂРѕРІРєР° РћРґРЅРѕРјРµСЂРЅРѕРіРѕ РјР°СЃСЃРёРІР° РІ РїРѕСЂСЏРґРєРµ РІРѕР·СЂР°СЃС‚Р°РЅРёСЏ, РїСЂРё РїРѕРјРѕС‰Рё Р°Р»РіРѕСЂРёС‚РјР° РІС‹Р±РѕСЂР°" << endl; break;
     case 14:
-        cout << Tusk + "Циклический сдвиг массива на заданное число элементов вправо" << endl; break;
+        cout << Tusk + "Р¦РёРєР»РёС‡РµСЃРєРёР№ СЃРґРІРёРі РјР°СЃСЃРёРІР° РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІРїСЂР°РІРѕ" << endl; break;
     case 15:
-        cout << Tusk + "Циклический сдвиг массива на заданное число элементов влево" << endl; break;
+        cout << Tusk + "Р¦РёРєР»РёС‡РµСЃРєРёР№ СЃРґРІРёРі РјР°СЃСЃРёРІР° РЅР° Р·Р°РґР°РЅРЅРѕРµ С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РІР»РµРІРѕ" << endl; break;
     default: break;
     }
 }
@@ -101,13 +101,13 @@ void TuskCounter()
     Message(tuskCounter);
 }
 
-template <typename T> void FillRand(T inputArr[globalSize])//Заполнить массив
+template <typename T> void FillRand(T inputArr[globalSize])//Р—Р°РїРѕР»РЅРёС‚СЊ РјР°СЃСЃРёРІ
 {
     TuskCounter();
     for (int i = 0; i < globalSize; i++) inputArr[i] = rand() % 100;
     cout << endl;
 }
-template <typename T> void FillRand(T inputArr[globalSize][globalSize])//Заполнить 2мерный массив
+template <typename T> void FillRand(T inputArr[globalSize][globalSize])//Р—Р°РїРѕР»РЅРёС‚СЊ 2РјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ
 {
     TuskCounter();
 
@@ -133,7 +133,7 @@ template <typename T> void Screen(T inputArr[globalSize][globalSize])
     Display(inputArr);
 }
 
-template <typename T> double Sum(T inputArr[globalSize])//Сумма 
+template <typename T> double Sum(T inputArr[globalSize])//РЎСѓРјРјР° 
 {
     int sum = 0;
     TuskCounter();
@@ -141,7 +141,7 @@ template <typename T> double Sum(T inputArr[globalSize])//Сумма
     return sum;
 }
 
-template <typename T> double Sum(T inputArr[globalSize][globalSize])//Сумма 
+template <typename T> double Sum(T inputArr[globalSize][globalSize])//РЎСѓРјРјР° 
 {
     int sum = 0;
     TuskCounter();
@@ -152,7 +152,7 @@ template <typename T> double Sum(T inputArr[globalSize][globalSize])//Сумма
     return sum;
 }
 
-template <typename T> double Avg(T inputArr[globalSize])//Среднее арифметическое
+template <typename T> double Avg(T inputArr[globalSize])//РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ
 {
     double sum = 0;
     TuskCounter();
@@ -160,7 +160,7 @@ template <typename T> double Avg(T inputArr[globalSize])//Среднее арифметическое
     return sum / globalSize;
 }
 
-template <typename T> double Avg(T inputArr[globalSize][globalSize])//Среднее арифметическое
+template <typename T> double Avg(T inputArr[globalSize][globalSize])//РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ
 {
     double sum = 0;
     TuskCounter();
@@ -171,7 +171,7 @@ template <typename T> double Avg(T inputArr[globalSize][globalSize])//Среднее ар
     return (sum / (globalSize * globalSize));
 }
 
-template <typename T> T MinValueIn(T inputArr[globalSize])//Мин значение
+template <typename T> T MinValueIn(T inputArr[globalSize])//РњРёРЅ Р·РЅР°С‡РµРЅРёРµ
 {
     TuskCounter();
     T minValue = inputArr[0];
@@ -179,7 +179,7 @@ template <typename T> T MinValueIn(T inputArr[globalSize])//Мин значение
     return minValue;
 }
 
-template <typename T> T MinValueIn(T inputArr[globalSize][globalSize])//Мин значение
+template <typename T> T MinValueIn(T inputArr[globalSize][globalSize])//РњРёРЅ Р·РЅР°С‡РµРЅРёРµ
 {
     TuskCounter();
     T minValue = inputArr[0][0];
@@ -190,7 +190,7 @@ template <typename T> T MinValueIn(T inputArr[globalSize][globalSize])//Мин знач
     return minValue;
 }
 
-template <typename T> T MaxValueIn(T inputArr[globalSize])//Макс значение
+template <typename T> T MaxValueIn(T inputArr[globalSize])//РњР°РєСЃ Р·РЅР°С‡РµРЅРёРµ
 {
     TuskCounter();
     T maxValue = inputArr[0];
@@ -198,7 +198,7 @@ template <typename T> T MaxValueIn(T inputArr[globalSize])//Макс значение
     return maxValue;
 }
 
-template <typename T> T MaxValueIn(T inputArr[globalSize][globalSize])//Макс значение
+template <typename T> T MaxValueIn(T inputArr[globalSize][globalSize])//РњР°РєСЃ Р·РЅР°С‡РµРЅРёРµ
 {
     TuskCounter();
     T maxValue = inputArr[0][0];
@@ -209,7 +209,7 @@ template <typename T> T MaxValueIn(T inputArr[globalSize][globalSize])//Макс зна
     return maxValue;
 }
 
-//Вывод на экран
+//Р’С‹РІРѕРґ РЅР° СЌРєСЂР°РЅ
 template <typename T> void Display(T inputArr[globalSize])
 {
     for (int i = 0; i < globalSize; i++) cout << inputArr[i] << "\t";
@@ -232,7 +232,7 @@ template <typename T> void Display(T inputArr[globalSize][globalSize])
     cout << endl;
 }
 
-//Сдвиг влево
+//РЎРґРІРёРі РІР»РµРІРѕ
 
 template <typename T> void ShiftRight(T inputArr[], int size)
 {
@@ -240,7 +240,7 @@ template <typename T> void ShiftRight(T inputArr[], int size)
     int shiftValue;
     const int newSize = 20;
     int newArray[newSize];
-    cout << "На сколько позиций вправо сдвинуть массив?: ";
+    cout << "РќР° СЃРєРѕР»СЊРєРѕ РїРѕР·РёС†РёР№ РІРїСЂР°РІРѕ СЃРґРІРёРЅСѓС‚СЊ РјР°СЃСЃРёРІ?: ";
     cin >> shiftValue;
     int tempCounter = 0, counter = 0;
     for (int i = 0; i < size; i++)
@@ -256,14 +256,14 @@ template <typename T> void ShiftRight(T inputArr[], int size)
     cout << endl;
 }
 
-//Сдвиг вправо
+//РЎРґРІРёРі РІРїСЂР°РІРѕ
 template <typename T> void ShiftLeft(T inputArr[], int size)
 {
     TuskCounter();
     int shiftValue;
     const int newSize = 20;
     int newArray[newSize];
-    cout << "На сколько позиций влево сдвинуть массив?: ";
+    cout << "РќР° СЃРєРѕР»СЊРєРѕ РїРѕР·РёС†РёР№ РІР»РµРІРѕ СЃРґРІРёРЅСѓС‚СЊ РјР°СЃСЃРёРІ?: ";
     cin >> shiftValue;
     int tempCounter = 0, counter = size;
     for (int i = size - 1; i >= 0; i--)
@@ -279,7 +279,7 @@ template <typename T> void ShiftLeft(T inputArr[], int size)
     cout << endl;
 }
 
-//Сортировка
+//РЎРѕСЂС‚РёСЂРѕРІРєР°
 template <typename T> void Sort(T inputArr[globalSize])
 {
     TuskCounter();

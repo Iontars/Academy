@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 int main()
@@ -17,7 +17,7 @@ int main()
     cin >> size;
     cout << endl;
 
-    // Êâàäðàò
+    // ÐšÐ²Ð°Ð´Ñ€Ð°Ñ‚
     for (outerLoop = 1; outerLoop <= size; outerLoop++)
     {
         for (insideLoop = 0; insideLoop < size; insideLoop++)
@@ -26,7 +26,7 @@ int main()
     }
     cout << endl;
 
-    // Òðåóãîëüíèêè
+    // Ð¢Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¸
     for (outerLoop = 1; outerLoop <= size; outerLoop++)
     {
         for (insideLoop = (size - outerLoop); insideLoop > 0; insideLoop--)
@@ -60,7 +60,7 @@ int main()
     }
     cout << endl;
 
-    // Ðîìá âêëþ÷àþùèé â ñåáÿ âñå ïðîñòûå òðåóãîëüíèêè
+    // Ð Ð¾Ð¼Ð± Ð²ÐºÐ»ÑŽÑ‡Ð°ÑŽÑ‰Ð¸Ð¹ Ð² ÑÐµÐ±Ñ Ð²ÑÐµ Ð¿Ñ€Ð¾ÑÑ‚Ñ‹Ðµ Ñ‚Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¸
     for (outerLoop = 1; outerLoop <= size; outerLoop++)
     {
         for (insideLoop = (size + 1 - outerLoop); insideLoop > 0; insideLoop--)
@@ -83,7 +83,7 @@ int main()
     }
     cout << endl;
 
-    // Ðîìá ñ äûðêîé
+    // Ð Ð¾Ð¼Ð± Ñ Ð´Ñ‹Ñ€ÐºÐ¾Ð¹
     for (outerLoop = 1; outerLoop <= size; outerLoop++)
     {
         for (insideLoop = (size + 1 - outerLoop); insideLoop > 0; insideLoop--)
@@ -110,7 +110,7 @@ int main()
     }
     cout << endl;
 
-    // Ïëþñ-ìèíóñ
+    // ÐŸÐ»ÑŽÑ-Ð¼Ð¸Ð½ÑƒÑ
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
@@ -124,13 +124,13 @@ int main()
     }
     cout << endl;
 
-    //Øàõìàòíàÿ äîñêà
+    //Ð¨Ð°Ñ…Ð¼Ð°Ñ‚Ð½Ð°Ñ Ð´Ð¾ÑÐºÐ°
     cout << char(218);
     for (int i = 0; i < size; i++)
     {
         cout << char(196) << char(196);
     }
-    cout << char(180); // íå ïî ãëàçàì íàéòè ïðàâûé âåðõíèé óãîëîê â àñêè òàáëèöå )))
+    cout << char(180); // Ð½Ðµ Ð¿Ð¾ Ð³Ð»Ð°Ð·Ð°Ð¼ Ð½Ð°Ð¹Ñ‚Ð¸ Ð¿Ñ€Ð°Ð²Ñ‹Ð¹ Ð²ÐµÑ€Ñ…Ð½Ð¸Ð¹ ÑƒÐ³Ð¾Ð»Ð¾Ðº Ð² Ð°ÑÐºÐ¸ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ðµ )))
     cout << endl;
     for (int i = 0; i < size; i++)
     {

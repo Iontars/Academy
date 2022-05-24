@@ -1,4 +1,4 @@
-#include <iostream>
+Ôªø#include <iostream>
 #include <string>
 #include<algorithm>
 using namespace std;
@@ -10,10 +10,10 @@ int main()
     string currentValue;
     string finalValue;
 
-    cout << "¬‚Â‰ËÂ ˜ËÒÎÓ: ";
+    cout << "–í–≤–µ–¥–∏–µ —á–∏—Å–ª–æ: ";
     cin >> inputValue;
 
-    // ƒ‚ÓË˜Ì‡ˇ ÒËÒÚÂÏ‡ 
+    // –î–≤–æ–∏—á–Ω–∞—è —Å–∏—Å—Ç–µ–º–∞ 
     currentValue = "";
     finalValue = "";
     processValue = inputValue;
@@ -22,15 +22,15 @@ int main()
         currentValue += to_string(processValue % 2);
         processValue = processValue / 2;
     }
-    //for (int i = currentValue.size(); i >= 0; i--) // –Â‚ÂÒ ÒÚÓÍË
+    //for (int i = currentValue.size(); i >= 0; i--) // –†–µ–≤–µ—Ä—Å —Å—Ç—Ä–æ–∫–∏
     //{
     //    finalValue += currentValue[i];
     //}
     std::reverse(currentValue.begin(), currentValue.end());
-    cout << inputValue << " ‚ ‰‚ÓË˜ÌÓÈ ÒËÒÚÂÏÂ Ó‚ÌˇÂÚÒˇ: " << finalValue;
+    cout << inputValue << " –≤ –¥–≤–æ–∏—á–Ω–æ–π —Å–∏—Å—Ç–µ–º–µ —Ä–æ–≤–Ω—è–µ—Ç—Å—è: " << finalValue;
     cout << currentValue << endl;
 
-    // ¬ÓÒ¸ÏËË˜Ì‡ˇ ÒËÒÚÂÏ‡ 
+    // –í–æ—Å—å–º–∏—Ä–∏—á–Ω–∞—è —Å–∏—Å—Ç–µ–º–∞ 
     currentValue = "";
     finalValue = "";
     processValue = inputValue;
@@ -39,13 +39,13 @@ int main()
         currentValue += to_string(processValue % 8);
         processValue = processValue / 8;
     }
-    for (int i = currentValue.size(); i >= 0; i--) // –Â‚ÂÒ ÒÚÓÍË
+    for (int i = currentValue.size(); i >= 0; i--) // –†–µ–≤–µ—Ä—Å —Å—Ç—Ä–æ–∫–∏
     {
         finalValue += currentValue[i];
     }
-    cout << inputValue << " ‚ ‚ÓÒ¸ÏËË˜ÌÓÈ ÒËÒÚÂÏÂ Ó‚ÌˇÂÚÒˇ: " << finalValue << endl;
+    cout << inputValue << " –≤ –≤–æ—Å—å–º–∏—Ä–∏—á–Ω–æ–π —Å–∏—Å—Ç–µ–º–µ —Ä–æ–≤–Ω—è–µ—Ç—Å—è: " << finalValue << endl;
 
-    // ÿÂÒÚÌ‡‰ˆ‡ÚËË˜Ì‡ˇ ÒËÒÚÂÏ‡ 
+    // –®–µ—Å—Ç–Ω–∞–¥—Ü–∞—Ç–∏—Ä–∏—á–Ω–∞—è —Å–∏—Å—Ç–µ–º–∞ 
     currentValue = "";
     processValue = inputValue;
     string values[16] = { "0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F" };
@@ -55,5 +55,5 @@ int main()
         processValue /= 16;
     } while (processValue != 0);
     finalValue = currentValue;
-    cout << inputValue << " ‚ ¯ÂÒÚÌ‡‰ˆ‡ÚËË˜ÌÓÈ ÒËÒÚÂÏÂ Ó‚ÌˇÂÚÒˇ: " << finalValue << endl;
+    cout << inputValue << " –≤ —à–µ—Å—Ç–Ω–∞–¥—Ü–∞—Ç–∏—Ä–∏—á–Ω–æ–π —Å–∏—Å—Ç–µ–º–µ —Ä–æ–≤–Ω—è–µ—Ç—Å—è: " << finalValue << endl;
 }

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <conio.h>
 using namespace std;
 
@@ -24,27 +24,27 @@ int main()
         //cout << int(key) << "\t" << key << endl;
         switch (key)
         {
-        case 'w': cout << "Âïåðåä" << endl;
+        case 'w': cout << "Ð’Ð¿ÐµÑ€ÐµÐ´" << endl;
             break;
-        case UpArrow: cout << "Âïåðåä" << endl;
+        case UpArrow: cout << "Ð’Ð¿ÐµÑ€ÐµÐ´" << endl;
             break;
-        case 'd': cout << "Âïðàâî" << endl;
+        case 'd': cout << "Ð’Ð¿Ñ€Ð°Ð²Ð¾" << endl;
             break;
-        case RightArrow: cout << "Âïðàâî" << endl;
+        case RightArrow: cout << "Ð’Ð¿Ñ€Ð°Ð²Ð¾" << endl;
             break;
-        case 'a': cout << "Âëåâî" << endl;
+        case 'a': cout << "Ð’Ð»ÐµÐ²Ð¾" << endl;
             break;
-        case LeftArrow: cout << "Âëåâî" << endl;
+        case LeftArrow: cout << "Ð’Ð»ÐµÐ²Ð¾" << endl;
             break;
-        case 's': cout << "Íàçàä" << endl;
+        case 's': cout << "ÐÐ°Ð·Ð°Ð´" << endl;
             break;
-        case DownArrow: cout << "Íàçàä" << endl;
+        case DownArrow: cout << "ÐÐ°Ð·Ð°Ð´" << endl;
             break;
-        case Space: cout << "Ïðûæîê" << endl;
+        case Space: cout << "ÐŸÑ€Ñ‹Ð¶Ð¾Ðº" << endl;
             break;
-        case Enter: cout << "Îãîíü" << endl;
+        case Enter: cout << "ÐžÐ³Ð¾Ð½ÑŒ" << endl;
             break;
-        default: if (key != 27 && key != 32) cout << "Îøèáêà" << endl;
+        default: if (key != 27 && key != 32) cout << "ÐžÑˆÐ¸Ð±ÐºÐ°" << endl;
             break;
         }
     } while (key != 27);

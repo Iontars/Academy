@@ -1,10 +1,10 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 #define arrowPointer " -> "
 #define doubleTab " \t\t "
-#define inputError " Не корректное значение "
-#define InputValue " Введите числовое значение:  "
+#define inputError " РќРµ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ "
+#define InputValue " Р’РІРµРґРёС‚Рµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ:  "
 
 void Task_1();
 void Task_2();
@@ -17,24 +17,24 @@ void Task_1()
 {
     long value = 0;
     long temp = 1;
-    cout << doubleTab << "Факториал числа (Задание №1)." << endl;
+    cout << doubleTab << "Р¤Р°РєС‚РѕСЂРёР°Р» С‡РёСЃР»Р° (Р—Р°РґР°РЅРёРµ в„–1)." << endl;
     cout << InputValue << arrowPointer;
     cin >> value;
     for (int i = 1; i <= value; i++)
     {
         temp *= i;
     }
-    cout << "Факториал числа " << value << " равен " << temp;
+    cout << "Р¤Р°РєС‚РѕСЂРёР°Р» С‡РёСЃР»Р° " << value << " СЂР°РІРµРЅ " << temp;
 }
 
 void Task_2()
 {
     int number, powerOfNumber;
     int result = 1;
-    cout << doubleTab << "Возведение в степень (Задание №2)." << endl;
-    cout << "Введите осование числа " << endl;
+    cout << doubleTab << "Р’РѕР·РІРµРґРµРЅРёРµ РІ СЃС‚РµРїРµРЅСЊ (Р—Р°РґР°РЅРёРµ в„–2)." << endl;
+    cout << "Р’РІРµРґРёС‚Рµ РѕСЃРѕРІР°РЅРёРµ С‡РёСЃР»Р° " << endl;
     cin >> number;
-    cout << "Введите степень числа " << endl;
+    cout << "Р’РІРµРґРёС‚Рµ СЃС‚РµРїРµРЅСЊ С‡РёСЃР»Р° " << endl;
     cin >> powerOfNumber;
     for (int i = 0; i < powerOfNumber; i++)
     {
@@ -45,7 +45,7 @@ void Task_2()
 
 void Task_3()
 {
-    cout << doubleTab << "Таблица ASCII-символов (Задание №3)." << endl;
+    cout << doubleTab << "РўР°Р±Р»РёС†Р° ASCII-СЃРёРјРІРѕР»РѕРІ (Р—Р°РґР°РЅРёРµ в„–3)." << endl;
     setlocale(LC_ALL, "EN");
     for (int i = 0; i < 8; ++i)
     {
@@ -64,7 +64,7 @@ void Task_4()
     int number;
     bool point;
     int j;
-    cout << doubleTab << "Ряд простых чисел (Задание №3)." << endl;
+    cout << doubleTab << "Р СЏРґ РїСЂРѕСЃС‚С‹С… С‡РёСЃРµР» (Р—Р°РґР°РЅРёРµ в„–3)." << endl;
     cout << InputValue << arrowPointer;
     cin >> number;
     for (int i = 2; i < number; i++)
@@ -85,13 +85,13 @@ void Task_4()
 
 void TaskEnd()
 {
-    cout << "Программа завершилась!";
+    cout << "РџСЂРѕРіСЂР°РјРјР° Р·Р°РІРµСЂС€РёР»Р°СЃСЊ!";
 }
 
 void TaskSelection()
 {
     string numberOfTask;
-    cout << endl << doubleTab << "Введите номер домашнего задания для проверки, от 1 до 4, введите q для выхода" << arrowPointer;
+    cout << endl << doubleTab << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РґРѕРјР°С€РЅРµРіРѕ Р·Р°РґР°РЅРёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё, РѕС‚ 1 РґРѕ 4, РІРІРµРґРёС‚Рµ q РґР»СЏ РІС‹С…РѕРґР°" << arrowPointer;
     cin >> numberOfTask; cout << endl;
     if (numberOfTask == "1")
     {

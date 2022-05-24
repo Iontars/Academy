@@ -1,20 +1,20 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <string>
 using namespace std;
 
-// Шарафанович Денис, СБУ221
-// Домашнее задание №3. ЦИКЛЫ
+// РЁР°СЂР°С„Р°РЅРѕРІРёС‡ Р”РµРЅРёСЃ, РЎР‘РЈ221
+// Р”РѕРјР°С€РЅРµРµ Р·Р°РґР°РЅРёРµ в„–3. Р¦РРљР›Р«
 
 #define arrowPointer " -> "
 #define doubleTab " \t\t "
-#define inputError " Не корректное значение "
-#define InputValue " Введите числовое значение:  "
+#define inputError " РќРµ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ "
+#define InputValue " Р’РІРµРґРёС‚Рµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ:  "
 
 
 void Task_1()
 {
     string currentValue;
-    cout << doubleTab << "Ввести значение температуры (Задание №1)." << endl;
+    cout << doubleTab << "Р’РІРµСЃС‚Рё Р·РЅР°С‡РµРЅРёРµ С‚РµРјРїРµСЂР°С‚СѓСЂС‹ (Р—Р°РґР°РЅРёРµ в„–1)." << endl;
     cout << InputValue << arrowPointer;
 
     try
@@ -30,22 +30,22 @@ void Task_1()
     }
     if (stoi(currentValue) > 0)
     {
-        cout << " На улице тепло! ";
+        cout << " РќР° СѓР»РёС†Рµ С‚РµРїР»Рѕ! ";
     }
     else if (stoi(currentValue) < 0)
     {
-        cout << " На улице холодно! ";
+        cout << " РќР° СѓР»РёС†Рµ С…РѕР»РѕРґРЅРѕ! ";
     }
     else if (stoi(currentValue) == 0)
     {
-        cout << " На улице " << currentValue;
+        cout << " РќР° СѓР»РёС†Рµ " << currentValue;
     }
 
 }
 void Task_2()
 {
     string currentValue;
-    cout << doubleTab << "Поразить цель (Задание №2)." << endl;
+    cout << doubleTab << "РџРѕСЂР°Р·РёС‚СЊ С†РµР»СЊ (Р—Р°РґР°РЅРёРµ в„–2)." << endl;
     cout << InputValue << arrowPointer;
 
     try
@@ -61,11 +61,11 @@ void Task_2()
     }
     if (stoi(currentValue) < 0 || stoi(currentValue) > 10)
     {
-        cout << " Цель не поражена! ";
+        cout << " Р¦РµР»СЊ РЅРµ РїРѕСЂР°Р¶РµРЅР°! ";
     }
-    else if (stoi(currentValue) > 0 && stoi(currentValue) < 10) // ЛИБО ПРОСТО ELSE
+    else if (stoi(currentValue) > 0 && stoi(currentValue) < 10) // Р›РР‘Рћ РџР РћРЎРўРћ ELSE
     {
-        cout << " Цель поражена! ";
+        cout << " Р¦РµР»СЊ РїРѕСЂР°Р¶РµРЅР°! ";
     }
 
 }
@@ -74,15 +74,15 @@ void Task_3()
     string currentValue_1, currentValue_2;
     string operatorType;
     double result = 0;
-    cout << doubleTab << "Калькулятор ) (Задание №3)." << endl;
+    cout << doubleTab << "РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ ) (Р—Р°РґР°РЅРёРµ в„–3)." << endl;
     try
     {
-        cout << "Введите первое значение и нажмите Enter" << arrowPointer;
+        cout << "Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ Р·РЅР°С‡РµРЅРёРµ Рё РЅР°Р¶РјРёС‚Рµ Enter" << arrowPointer;
         cin >> currentValue_1;
         stoi(currentValue_1);
-        cout << "Введите один из представленных операторов: +, -, *, /, и нажмите Enter" << arrowPointer;
+        cout << "Р’РІРµРґРёС‚Рµ РѕРґРёРЅ РёР· РїСЂРµРґСЃС‚Р°РІР»РµРЅРЅС‹С… РѕРїРµСЂР°С‚РѕСЂРѕРІ: +, -, *, /, Рё РЅР°Р¶РјРёС‚Рµ Enter" << arrowPointer;
         cin >> operatorType;
-        cout << "Введите второе значение и нажмите Enter" << arrowPointer;
+        cout << "Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ Р·РЅР°С‡РµРЅРёРµ Рё РЅР°Р¶РјРёС‚Рµ Enter" << arrowPointer;
         cin >> currentValue_2;
         stoi(currentValue_2);
 
@@ -114,24 +114,24 @@ void Task_3()
     }
     else
     {
-        cout << "Введён не верный опереатор " << endl;
+        cout << "Р’РІРµРґС‘РЅ РЅРµ РІРµСЂРЅС‹Р№ РѕРїРµСЂРµР°С‚РѕСЂ " << endl;
         Task_3();
 
     }
 
-    cout << "Результат: " << result;
+    cout << "Р РµР·СѓР»СЊС‚Р°С‚: " << result;
 
 }
 void TaskEnd()
 {
-    cout << "Программа завершилась";
+    cout << "РџСЂРѕРіСЂР°РјРјР° Р·Р°РІРµСЂС€РёР»Р°СЃСЊ";
 }
 
 
 void TaskSelection()
 {
     string numberOfTask;
-    cout << endl << doubleTab << "Введите номер домашнего задания для проверки, от 1 до 3, введите q для выхода" << arrowPointer;
+    cout << endl << doubleTab << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РґРѕРјР°С€РЅРµРіРѕ Р·Р°РґР°РЅРёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё, РѕС‚ 1 РґРѕ 3, РІРІРµРґРёС‚Рµ q РґР»СЏ РІС‹С…РѕРґР°" << arrowPointer;
     cin >> numberOfTask; cout << endl;
     if (numberOfTask == "1")
     {

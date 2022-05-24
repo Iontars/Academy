@@ -1,13 +1,13 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <string>
 using namespace std;
 
-//ОБЩИЕ МАКРОСЫ
-#define currencyType " грн. "
-#define brCurrencyType " (грн.)"
-#define pennyType " коп. "
-#define bundle " (шт.) "
-#define km " км. "
+//РћР‘Р©РР• РњРђРљР РћРЎР«
+#define currencyType " РіСЂРЅ. "
+#define brCurrencyType " (РіСЂРЅ.)"
+#define pennyType " РєРѕРї. "
+#define bundle " (С€С‚.) "
+#define km " РєРј. "
 #define arrowPointer " -> "
 #define doubleTab " \t\t "
 
@@ -17,23 +17,23 @@ using namespace std;
 #define TASK_REGION_4
 
 string numberOfTask;
-//ПЕРЕМЕННЫЕ ДЛЯ ЗАДАЧИ №1
+//РџР•Р Р•РњР•РќРќР«Р• Р”Р›РЇ Р—РђР”РђР§Р в„–1
 double value, rub, penny;
-//ПЕРЕМЕННЫЕ ДЛЯ ЗАДАЧИ №2
+//РџР•Р Р•РњР•РќРќР«Р• Р”Р›РЇ Р—РђР”РђР§Р в„–2
 int numbersOfCopybook, numbersOfPencil;
 double copybookPrice, pencilPrice, copybookTotalCost, pencilTotalCost, currentTotalCost;
-//ПЕРЕМЕННЫЕ ДЛЯ ЗАДАЧИ №3
+//РџР•Р Р•РњР•РќРќР«Р• Р”Р›РЇ Р—РђР”РђР§Р в„–3
 int numberOfBundles;
 double copybookPrice_2, copybookCoverPrice, currentCost;
-//ПЕРЕМЕННЫЕ ДЛЯ ЗАДАЧИ №4
+//РџР•Р Р•РњР•РќРќР«Р• Р”Р›РЇ Р—РђР”РђР§Р в„–4
 double roadDistance, gasConsum, gasCost, totalCost;
-//ПЕРЕЧИСЛЕНИЯ ДЛЯ ВЫБОРА ЗАДАЧИ
+//РџР•Р Р•Р§РРЎР›Р•РќРРЇ Р”Р›РЇ Р’Р«Р‘РћР Рђ Р—РђР”РђР§Р
 enum Tasks
 {
     TASK_1 = 1, TASK_2 = 2, TASK_3 = 3, TASK_4 = 4
 };
 Tasks tasks;
-//МЕТОДЫ ДЛЯ РЕШЕНИЯ ЗАДАЧ
+//РњР•РўРћР”Р« Р”Р›РЇ Р Р•РЁР•РќРРЇ Р—РђР”РђР§
 void Task_1_calc()
 {
     rub = (int)value;
@@ -53,15 +53,15 @@ void Task_4_calc()
 {
     totalCost = gasConsum / 100 * (roadDistance * 2) * gasCost;
 }
-//ТОЧКА ВХОДА
+//РўРћР§РљРђ Р’РҐРћР”Рђ
 int main()
 {
     cout << typeid(numberOfTask).name();
     setlocale(LC_ALL, "ru");
-tryAgain: // Метка перехода на выбор задачи
-    cout << endl << doubleTab << "Введите номер домашнего задания для проверки, от 1 до 4" << arrowPointer;
+tryAgain: // РњРµС‚РєР° РїРµСЂРµС…РѕРґР° РЅР° РІС‹Р±РѕСЂ Р·Р°РґР°С‡Рё
+    cout << endl << doubleTab << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РґРѕРјР°С€РЅРµРіРѕ Р·Р°РґР°РЅРёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё, РѕС‚ 1 РґРѕ 4" << arrowPointer;
     cin >> numberOfTask; cout << endl;
-    //ОБРАБОТЧИК ОШИБОК НА СЛУЧАЙ ВВОДА НЕ КОРРЕКТНЫХ ДАННЫХ (реализовал только на этапе выбора задания, дабы не перегружать код)
+    //РћР‘Р РђР‘РћРўР§РРљ РћРЁРР‘РћРљ РќРђ РЎР›РЈР§РђР™ Р’Р’РћР”Рђ РќР• РљРћР Р Р•РљРўРќР«РҐ Р”РђРќРќР«РҐ (СЂРµР°Р»РёР·РѕРІР°Р» С‚РѕР»СЊРєРѕ РЅР° СЌС‚Р°РїРµ РІС‹Р±РѕСЂР° Р·Р°РґР°РЅРёСЏ, РґР°Р±С‹ РЅРµ РїРµСЂРµРіСЂСѓР¶Р°С‚СЊ РєРѕРґ)
     try
     {
         switch (stoi(numberOfTask))
@@ -75,24 +75,24 @@ tryAgain: // Метка перехода на выбор задачи
         case 4:
             tasks = TASK_4; break;
         default:
-            cout << endl << doubleTab << "Введено не корректное значение, попробуйте снова!" << endl;
+            cout << endl << doubleTab << "Р’РІРµРґРµРЅРѕ РЅРµ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°!" << endl;
             goto tryAgain; break;
         }
     }
     catch (...)
     {
-        cout << endl << doubleTab << "Введено не корректное значение, попробуйте снова!" << endl;
+        cout << endl << doubleTab << "Р’РІРµРґРµРЅРѕ РЅРµ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°!" << endl;
         goto tryAgain;
     }
 
 #if defined  TASK_REGION_1
     if (tasks == 1)
     {
-        cout << doubleTab << "Преобразование числа в денежный формат (Задание №1)." << endl;
-        cout << "Введите дробное число" << arrowPointer;
+        cout << doubleTab << "РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ С‡РёСЃР»Р° РІ РґРµРЅРµР¶РЅС‹Р№ С„РѕСЂРјР°С‚ (Р—Р°РґР°РЅРёРµ в„–1)." << endl;
+        cout << "Р’РІРµРґРёС‚Рµ РґСЂРѕР±РЅРѕРµ С‡РёСЃР»Рѕ" << arrowPointer;
         cin >> value; cout << endl;
         Task_1_calc();
-        cout << value << currencyType << " - это " << rub << currencyType << penny << pennyType << endl;
+        cout << value << currencyType << " - СЌС‚Рѕ " << rub << currencyType << penny << pennyType << endl;
         goto tryAgain;
     }
 #endif
@@ -100,18 +100,18 @@ tryAgain: // Метка перехода на выбор задачи
 #if defined  TASK_REGION_2
     if (tasks == 2)
     {
-        cout << doubleTab << "Вычисление стоимости покупки (Задание №2)." << endl;
-        cout << "Введите исходные данные: " << endl;
-        cout << "Цена тертади" << brCurrencyType << arrowPointer;
+        cout << doubleTab << "Р’С‹С‡РёСЃР»РµРЅРёРµ СЃС‚РѕРёРјРѕСЃС‚Рё РїРѕРєСѓРїРєРё (Р—Р°РґР°РЅРёРµ в„–2)." << endl;
+        cout << "Р’РІРµРґРёС‚Рµ РёСЃС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ: " << endl;
+        cout << "Р¦РµРЅР° С‚РµСЂС‚Р°РґРё" << brCurrencyType << arrowPointer;
         cin >> copybookPrice;
-        cout << "Колчество тетадей" << arrowPointer;
+        cout << "РљРѕР»С‡РµСЃС‚РІРѕ С‚РµС‚Р°РґРµР№" << arrowPointer;
         cin >> numbersOfCopybook;
-        cout << "Цена карандаша" << brCurrencyType << arrowPointer;
+        cout << "Р¦РµРЅР° РєР°СЂР°РЅРґР°С€Р°" << brCurrencyType << arrowPointer;
         cin >> pencilPrice;
-        cout << "Колчество карандашей" << arrowPointer;
+        cout << "РљРѕР»С‡РµСЃС‚РІРѕ РєР°СЂР°РЅРґР°С€РµР№" << arrowPointer;
         cin >> numbersOfPencil;
         Task_2_calc();
-        cout << "Стоимость покупки: " << currentTotalCost << currencyType << endl;
+        cout << "РЎС‚РѕРёРјРѕСЃС‚СЊ РїРѕРєСѓРїРєРё: " << currentTotalCost << currencyType << endl;
         goto tryAgain;
     }
 #endif
@@ -119,16 +119,16 @@ tryAgain: // Метка перехода на выбор задачи
 #if defined  TASK_REGION_3
     if (tasks == 3)
     {
-        cout << doubleTab << "Вычисление стоимости покупки (Задание №3)." << endl;
-        cout << "Введите исходные данные: " << endl;
-        cout << "Цена тертади" << brCurrencyType << arrowPointer;
+        cout << doubleTab << "Р’С‹С‡РёСЃР»РµРЅРёРµ СЃС‚РѕРёРјРѕСЃС‚Рё РїРѕРєСѓРїРєРё (Р—Р°РґР°РЅРёРµ в„–3)." << endl;
+        cout << "Р’РІРµРґРёС‚Рµ РёСЃС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ: " << endl;
+        cout << "Р¦РµРЅР° С‚РµСЂС‚Р°РґРё" << brCurrencyType << arrowPointer;
         cin >> copybookPrice_2;
-        cout << "Цена обложки" << brCurrencyType << arrowPointer;
+        cout << "Р¦РµРЅР° РѕР±Р»РѕР¶РєРё" << brCurrencyType << arrowPointer;
         cin >> copybookCoverPrice;
-        cout << "Колчество комплектов" << bundle << arrowPointer;
+        cout << "РљРѕР»С‡РµСЃС‚РІРѕ РєРѕРјРїР»РµРєС‚РѕРІ" << bundle << arrowPointer;
         cin >> numberOfBundles;
         Task_3_calc();
-        cout << "Стоимость покупки: " << currentCost << currencyType << endl;
+        cout << "РЎС‚РѕРёРјРѕСЃС‚СЊ РїРѕРєСѓРїРєРё: " << currentCost << currencyType << endl;
         goto tryAgain;
     }
 #endif
@@ -136,12 +136,12 @@ tryAgain: // Метка перехода на выбор задачи
 #if defined  TASK_REGION_4
     if (tasks == 4)
     {
-        cout << doubleTab << "Вычисление стоимости поездки на дачу и обратно (Задание №4)." << endl;
-        cout << "Расстояние до дачи" << km << arrowPointer;
+        cout << doubleTab << "Р’С‹С‡РёСЃР»РµРЅРёРµ СЃС‚РѕРёРјРѕСЃС‚Рё РїРѕРµР·РґРєРё РЅР° РґР°С‡Сѓ Рё РѕР±СЂР°С‚РЅРѕ (Р—Р°РґР°РЅРёРµ в„–4)." << endl;
+        cout << "Р Р°СЃСЃС‚РѕСЏРЅРёРµ РґРѕ РґР°С‡Рё" << km << arrowPointer;
         cin >> roadDistance;
-        cout << "Расход бензина (литров на 100 км пробега)" << arrowPointer;
+        cout << "Р Р°СЃС…РѕРґ Р±РµРЅР·РёРЅР° (Р»РёС‚СЂРѕРІ РЅР° 100 РєРј РїСЂРѕР±РµРіР°)" << arrowPointer;
         cin >> gasConsum;
-        cout << "Цена литра бензина" << brCurrencyType << arrowPointer;
+        cout << "Р¦РµРЅР° Р»РёС‚СЂР° Р±РµРЅР·РёРЅР°" << brCurrencyType << arrowPointer;
         cin >> gasCost;
         Task_4_calc();
         cout << totalCost;

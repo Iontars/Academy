@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <time.h>
 using namespace std;
 
@@ -18,7 +18,7 @@ int main()
     srand(time(NULL));
     int squareSize;
     int det;
-    cout << "Ââåñòè ðàçìåð ìàòðèöû:";
+    cout << "Ð’Ð²ÐµÑÑ‚Ð¸ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹:";
     cout << endl;
     cin >> squareSize;
     int** matrix = new int* [squareSize];
@@ -34,9 +34,9 @@ int main()
     FillRand(matrix, squareSize);
     FillRand(matrix_2, squareSize);
     cout << endl;
-    cout << "Âûâîä ìàòðèöû_1" << endl;
+    cout << "Ð’Ñ‹Ð²Ð¾Ð´ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹_1" << endl;
     DisplayMatrix(matrix, squareSize);
-    cout << endl << "Âûâîä ìàòðèöû_2" << endl;
+    cout << endl << "Ð’Ñ‹Ð²Ð¾Ð´ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹_2" << endl;
     DisplayMatrix(matrix_2, squareSize);
     cout << endl;
     int** sum_matrix = SumMatrix(matrix, matrix_2, squareSize);
@@ -47,8 +47,8 @@ int main()
     DisplayMatrix(sub_matrix, squareSize);
     DisplayMatrix(mul_matrix, squareSize);
 
-    cout << "Îïðåäåëèòåëü ìàòðèöû 1 ðàâåí: " << Determinant(matrix, squareSize) << endl;
-    cout << "Îïðåäåëèòåëü ìàòðèöû 2 ðàâåí: " << Determinant(matrix_2, squareSize) << endl;
+    cout << "ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚ÐµÐ»ÑŒ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ 1 Ñ€Ð°Ð²ÐµÐ½: " << Determinant(matrix, squareSize) << endl;
+    cout << "ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»Ð¸Ñ‚ÐµÐ»ÑŒ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹ 2 Ñ€Ð°Ð²ÐµÐ½: " << Determinant(matrix_2, squareSize) << endl;
 
     for (int i = 0; i < squareSize; i++)
     {
@@ -63,14 +63,14 @@ int main()
     }
     Transposition(reverseMatrix, tempReverseMatrix, squareSize);
 
-    cout << endl << "Îáðàòíàÿ ìàòðèöà ìàòðèöå 1: " << endl;
+    cout << endl << "ÐžÐ±Ñ€Ð°Ñ‚Ð½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð° Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ðµ 1: " << endl;
     DisplayMatrix(tempReverseMatrix, squareSize);
 
 }
 
 template <typename T> T** SumMatrix(T** matrix, T** matrix2, int squareSize)
 {
-    //cout << "Ñóììà ìàòðèö ðàâíà: " << endl;
+    //cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ñ€Ð°Ð²Ð½Ð°: " << endl;
     T** resultMAtrix = new T * [squareSize];
     CreateMatrix(resultMAtrix, squareSize);
     for (int i = 0; i < squareSize; i++)
@@ -84,7 +84,7 @@ template <typename T> T** SumMatrix(T** matrix, T** matrix2, int squareSize)
 
 template <typename T> T** SubMatrix(T** matrix, T** matrix2, int squareSize)
 {
-    //cout << "Ðàçíèöà ìàòðèö ðàâíà: " << endl;
+    //cout << "Ð Ð°Ð·Ð½Ð¸Ñ†Ð° Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ñ€Ð°Ð²Ð½Ð°: " << endl;
     T** resultMAtrix = new T * [squareSize];
     CreateMatrix(resultMAtrix, squareSize);
     for (int i = 0; i < squareSize; i++)
@@ -97,7 +97,7 @@ template <typename T> T** SubMatrix(T** matrix, T** matrix2, int squareSize)
 }
 template <typename T> T** MultMatrix(T** matrix, T** matrix2, int squareSize)
 {
-    //cout << "Ïðîèçâåäåíèå ìàòðèö ðàâíî: " << endl;
+    //cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ñ€Ð°Ð²Ð½Ð¾: " << endl;
     T** resultMAtrix = new T * [squareSize];
     CreateMatrix(resultMAtrix, squareSize);
     for (int i = 0; i < squareSize; i++)

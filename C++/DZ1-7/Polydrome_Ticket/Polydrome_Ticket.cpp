@@ -1,14 +1,14 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <string>
 using namespace std;
 
-// Шарафанович Денис, СБУ221
-// Домашнее задание №4. ЦИКЛЫ
+// РЁР°СЂР°С„Р°РЅРѕРІРёС‡ Р”РµРЅРёСЃ, РЎР‘РЈ221
+// Р”РѕРјР°С€РЅРµРµ Р·Р°РґР°РЅРёРµ в„–4. Р¦РРљР›Р«
 
 #define arrowPointer " -> "
 #define doubleTab " \t\t "
-#define inputError " Не корректное значение "
-#define InputValue " Введите числовое значение:  "
+#define inputError " РќРµ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ "
+#define InputValue " Р’РІРµРґРёС‚Рµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ:  "
 
 void Task_1();
 void Task_2();
@@ -18,7 +18,7 @@ void TaskSelection();
 void Task_1()
 {
 
-    cout << doubleTab << " Полиндром числа (Задание №1)." << endl;
+    cout << doubleTab << " РџРѕР»РёРЅРґСЂРѕРј С‡РёСЃР»Р° (Р—Р°РґР°РЅРёРµ в„–1)." << endl;
     cout << InputValue << arrowPointer;
     int inputValue;
     int newValue = 0;
@@ -31,33 +31,33 @@ void Task_1()
         currentValue /= 10;
     }
     if (inputValue == newValue)
-        std::cout << "Палиндром!";
+        std::cout << "РџР°Р»РёРЅРґСЂРѕРј!";
     else
-        std::cout << "Не полиндром!";
+        std::cout << "РќРµ РїРѕР»РёРЅРґСЂРѕРј!";
 
 }
 void Task_2()
 {
     string inputtValue;
     int happyTicketValue = rand() % 5 - 1;
-    cout << doubleTab << "Счастливый билет (Задание №2)." << endl;
-    cout << InputValue << "от 1 до 5 " << arrowPointer;
+    cout << doubleTab << "РЎС‡Р°СЃС‚Р»РёРІС‹Р№ Р±РёР»РµС‚ (Р—Р°РґР°РЅРёРµ в„–2)." << endl;
+    cout << InputValue << "РѕС‚ 1 РґРѕ 5 " << arrowPointer;
     cin >> inputtValue;
     if (happyTicketValue == stoi(inputtValue))
-        cout << "Счастливый билет";
+        cout << "РЎС‡Р°СЃС‚Р»РёРІС‹Р№ Р±РёР»РµС‚";
     else
-        cout << "Не счастливый билет";
+        cout << "РќРµ СЃС‡Р°СЃС‚Р»РёРІС‹Р№ Р±РёР»РµС‚";
 }
 void TaskEnd()
 {
-    cout << "Программа завершилась";
+    cout << "РџСЂРѕРіСЂР°РјРјР° Р·Р°РІРµСЂС€РёР»Р°СЃСЊ";
 }
 
 
 void TaskSelection()
 {
     string numberOfTask;
-    cout << endl << doubleTab << "Введите номер домашнего задания для проверки, от 1 до 3, введите q для выхода" << arrowPointer;
+    cout << endl << doubleTab << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РґРѕРјР°С€РЅРµРіРѕ Р·Р°РґР°РЅРёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё, РѕС‚ 1 РґРѕ 3, РІРІРµРґРёС‚Рµ q РґР»СЏ РІС‹С…РѕРґР°" << arrowPointer;
     cin >> numberOfTask; cout << endl;
     if (numberOfTask == "1")
     {
