@@ -31,7 +31,7 @@ void Task_1()
         currentValue /= 10;
     }
     if (inputValue == newValue)
-        std::cout << "Палиндром!";
+        std::cout << "Полиндром!";
     else
         std::cout << "Не полиндром!";
 
