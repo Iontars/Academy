@@ -1,12 +1,12 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <typeinfo>
 using namespace std;
 
-#define currencyType " ãðí. "
-#define brCurrencyType " (ãðí.)"
-#define pennyType " êîï. "
-#define bundle " (øò.) "
-#define km " êì. "
+#define currencyType " Ð³Ñ€Ð½. "
+#define brCurrencyType " (Ð³Ñ€Ð½.)"
+#define pennyType " ÐºÐ¾Ð¿. "
+#define bundle " (ÑˆÑ‚.) "
+#define km " ÐºÐ¼. "
 #define arrowPointer " -> "
 #define doubleTab " \t\t "
 
@@ -27,7 +27,7 @@ int main()
     int numberOfTask;
 
 tryAgain:
-    cout << endl << doubleTab << "Ââåäèòå íîìåð äîìàøíåãî çàäàíèÿ äëÿ ïðîâåðêè, îò 1 äî 4" << arrowPointer;
+    cout << endl << doubleTab << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð´Ð¾Ð¼Ð°ÑˆÐ½ÐµÐ³Ð¾ Ð·Ð°Ð´Ð°Ð½Ð¸Ñ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ¸, Ð¾Ñ‚ 1 Ð´Ð¾ 4" << arrowPointer;
     cin >> numberOfTask; cout << endl;
     switch (numberOfTask) {
     case 1:
@@ -39,7 +39,7 @@ tryAgain:
     case 4:
         tasks = TASK_4; break;
     default:
-        cout << endl << doubleTab << "Ââåäåíî íå êîððåêòíîå çíà÷åíèå, ïîïðîáóéòå ñíîâà!" << endl;
+        cout << endl << doubleTab << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÑÐ½Ð¾Ð²Ð°!" << endl;
         goto tryAgain; break;
     }
 
@@ -47,12 +47,12 @@ tryAgain:
     if (tasks == 1)
     {
         double value, rub, penny;
-        cout << doubleTab << "Ïðåîáðàçîâàíèå ÷èñëà â äåíåæíûé ôîðìàò (Çàäàíèå ¹1)." << endl;
-        cout << "Ââåäèòå äðîáíîå ÷èñëî" << arrowPointer;
+        cout << doubleTab << "ÐŸÑ€ÐµÐ¾Ð±Ñ€Ð°Ð·Ð¾Ð²Ð°Ð½Ð¸Ðµ Ñ‡Ð¸ÑÐ»Ð° Ð² Ð´ÐµÐ½ÐµÐ¶Ð½Ñ‹Ð¹ Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚ (Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ â„–1)." << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€Ð¾Ð±Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾" << arrowPointer;
         cin >> value; cout << endl;
         rub = (int)value;
         penny = (value - rub) * 100;
-        cout << value << currencyType << " - ýòî " << rub << currencyType << penny << pennyType << endl;
+        cout << value << currencyType << " - ÑÑ‚Ð¾ " << rub << currencyType << penny << pennyType << endl;
         goto tryAgain;
     }
 #endif TASK_REGION_1
@@ -62,20 +62,20 @@ tryAgain:
     {
         int numbersOfCopybook, numbersOfPencil;
         double copybookPrice, pencilPrice, copybookTotalCost, pencilTotalCost, currentTotalCost;
-        cout << doubleTab << "Âû÷èñëåíèå ñòîèìîñòè ïîêóïêè (Çàäàíèå ¹2)." << endl;
-        cout << "Ââåäèòå èñõîäíûå äàííûå: " << endl;
-        cout << "Öåíà òåðòàäè" << brCurrencyType << arrowPointer;
+        cout << doubleTab << "Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚Ð¸ Ð¿Ð¾ÐºÑƒÐ¿ÐºÐ¸ (Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ â„–2)." << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸ÑÑ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: " << endl;
+        cout << "Ð¦ÐµÐ½Ð° Ñ‚ÐµÑ€Ñ‚Ð°Ð´Ð¸" << brCurrencyType << arrowPointer;
         cin >> copybookPrice;
-        cout << "Êîë÷åñòâî òåòàäåé" << arrowPointer;
+        cout << "ÐšÐ¾Ð»Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‚ÐµÑ‚Ð°Ð´ÐµÐ¹" << arrowPointer;
         cin >> numbersOfCopybook;
-        cout << "Öåíà êàðàíäàøà" << brCurrencyType << arrowPointer;
+        cout << "Ð¦ÐµÐ½Ð° ÐºÐ°Ñ€Ð°Ð½Ð´Ð°ÑˆÐ°" << brCurrencyType << arrowPointer;
         cin >> pencilPrice;
-        cout << "Êîë÷åñòâî êàðàíäàøåé" << arrowPointer;
+        cout << "ÐšÐ¾Ð»Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÐ°Ñ€Ð°Ð½Ð´Ð°ÑˆÐµÐ¹" << arrowPointer;
         cin >> numbersOfPencil;
         copybookTotalCost = numbersOfCopybook * copybookPrice;
         pencilTotalCost = numbersOfPencil * pencilPrice;
         currentTotalCost = copybookTotalCost + pencilTotalCost;
-        cout << "Ñòîèìîñòü ïîêóïêè: " << currentTotalCost << currencyType << endl;
+        cout << "Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð¿Ð¾ÐºÑƒÐ¿ÐºÐ¸: " << currentTotalCost << currencyType << endl;
         goto tryAgain;
     }
 #endif TASK_REGION_2
@@ -85,16 +85,16 @@ tryAgain:
     {
         double copybookPrice, copybookCoverPrice, currentCost;
         int numberOfBundles;
-        cout << doubleTab << "Âû÷èñëåíèå ñòîèìîñòè ïîêóïêè (Çàäàíèå ¹3)." << endl;
-        cout << "Ââåäèòå èñõîäíûå äàííûå: " << endl;
-        cout << "Öåíà òåðòàäè" << brCurrencyType << arrowPointer;
+        cout << doubleTab << "Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚Ð¸ Ð¿Ð¾ÐºÑƒÐ¿ÐºÐ¸ (Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ â„–3)." << endl;
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸ÑÑ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: " << endl;
+        cout << "Ð¦ÐµÐ½Ð° Ñ‚ÐµÑ€Ñ‚Ð°Ð´Ð¸" << brCurrencyType << arrowPointer;
         cin >> copybookPrice;
-        cout << "Öåíà îáëîæêè" << brCurrencyType << arrowPointer;
+        cout << "Ð¦ÐµÐ½Ð° Ð¾Ð±Ð»Ð¾Ð¶ÐºÐ¸" << brCurrencyType << arrowPointer;
         cin >> copybookCoverPrice;
-        cout << "Êîë÷åñòâî êîìïëåêòîâ" << bundle << arrowPointer;
+        cout << "ÐšÐ¾Ð»Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÐ¾Ð¼Ð¿Ð»ÐµÐºÑ‚Ð¾Ð²" << bundle << arrowPointer;
         cin >> numberOfBundles;
         currentCost = numberOfBundles * (copybookPrice + copybookCoverPrice);
-        cout << "Ñòîèìîñòü ïîêóïêè: " << currentCost << currencyType << endl;
+        cout << "Ð¡Ñ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ Ð¿Ð¾ÐºÑƒÐ¿ÐºÐ¸: " << currentCost << currencyType << endl;
         goto tryAgain;
     }
 #endif TASK_REGION_3
@@ -103,12 +103,12 @@ tryAgain:
     if (tasks == 4)
     {
         double distance, gasConsum, gasCost, totalCost;
-        cout << doubleTab << "Âû÷èñëåíèå ñòîèìîñòè ïîåçäêè íà äà÷ó è îáðàòíî (Çàäàíèå ¹4)." << endl;
-        cout << "Ðàññòîÿíèå äî äà÷è" << km << arrowPointer;
+        cout << doubleTab << "Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚Ð¸ Ð¿Ð¾ÐµÐ·Ð´ÐºÐ¸ Ð½Ð° Ð´Ð°Ñ‡Ñƒ Ð¸ Ð¾Ð±Ñ€Ð°Ñ‚Ð½Ð¾ (Ð—Ð°Ð´Ð°Ð½Ð¸Ðµ â„–4)." << endl;
+        cout << "Ð Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð´Ð¾ Ð´Ð°Ñ‡Ð¸" << km << arrowPointer;
         cin >> distance;
-        cout << "Ðàñõîä áåíçèíà (ëèòðîâ íà 100 êì ïðîáåãà)" << arrowPointer;
+        cout << "Ð Ð°ÑÑ…Ð¾Ð´ Ð±ÐµÐ½Ð·Ð¸Ð½Ð° (Ð»Ð¸Ñ‚Ñ€Ð¾Ð² Ð½Ð° 100 ÐºÐ¼ Ð¿Ñ€Ð¾Ð±ÐµÐ³Ð°)" << arrowPointer;
         cin >> gasConsum;
-        cout << "Öåíà ëèòðà áåíçèíà" << brCurrencyType << arrowPointer;
+        cout << "Ð¦ÐµÐ½Ð° Ð»Ð¸Ñ‚Ñ€Ð° Ð±ÐµÐ½Ð·Ð¸Ð½Ð°" << brCurrencyType << arrowPointer;
         cin >> gasCost;
         totalCost = gasConsum / 100 * (distance * 2) * gasCost;
         cout << totalCost;
