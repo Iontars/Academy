@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <time.h>
 using namespace std;
 
@@ -7,7 +7,7 @@ template <typename T> void FillRand(T*  array, int  size);
 template <typename T> void DisplayMatrix(T* array, int squareSize);
 template <typename T> void Even(T*& array, T*& even, int& size, int& evenSize);
 template <typename T> void Odd(T*& array, T*& even, int& size, int& oddSize);
-template <typename T>  void DeleteDynamicArray(T* array); //(1) не знаю удаляется ли массив если его загнать в метод
+template <typename T>  void DeleteDynamicArray(T* array); //(1) РЅРµ Р·РЅР°СЋ СѓРґР°Р»СЏРµС‚СЃСЏ Р»Рё РјР°СЃСЃРёРІ РµСЃР»Рё РµРіРѕ Р·Р°РіРЅР°С‚СЊ РІ РјРµС‚РѕРґ
 
 int main()
 {
@@ -25,14 +25,14 @@ int main()
     cout << endl;
 
     Even(mainArray, evenArray, size, dynamicArraySize);
-    DisplayMatrix(evenArray, dynamicArraySize); // Здесь evenArray уже ссылается на новый массив в куче.
+    DisplayMatrix(evenArray, dynamicArraySize); // Р—РґРµСЃСЊ evenArray СѓР¶Рµ СЃСЃС‹Р»Р°РµС‚СЃСЏ РЅР° РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ РІ РєСѓС‡Рµ.
     cout << endl;
       
     Odd(mainArray, oddArray, size, dynamicArraySize);
     DisplayMatrix(oddArray, dynamicArraySize);
     cout << endl;
  
-    delete[] mainArray; //(1) поэтому сделал так )
+    delete[] mainArray; //(1) РїРѕСЌС‚РѕРјСѓ СЃРґРµР»Р°Р» С‚Р°Рє )
     delete[] evenArray;
     delete[] oddArray;
 }
@@ -54,7 +54,7 @@ template <typename T> void DisplayMatrix(T* const array, int const size)
     cout << "\n";
 }
 
-//работаем со ссылками, позволяет вернуть из метода множество значений
+//СЂР°Р±РѕС‚Р°РµРј СЃРѕ СЃСЃС‹Р»РєР°РјРё, РїРѕР·РІРѕР»СЏРµС‚ РІРµСЂРЅСѓС‚СЊ РёР· РјРµС‚РѕРґР° РјРЅРѕР¶РµСЃС‚РІРѕ Р·РЅР°С‡РµРЅРёР№
 template <typename T> void Even(T*& array, T*& even, int& size, int& evenSize)
 {
     int matchCounter = 0;
@@ -76,8 +76,8 @@ template <typename T> void Even(T*& array, T*& even, int& size, int& evenSize)
         }
     }
     evenSize = matchCounter;
-    delete[] even; //(1) поэтому сделал так )
-    even = evenTemp; // перезапись ссылки на массив 
+    delete[] even; //(1) РїРѕСЌС‚РѕРјСѓ СЃРґРµР»Р°Р» С‚Р°Рє )
+    even = evenTemp; // РїРµСЂРµР·Р°РїРёСЃСЊ СЃСЃС‹Р»РєРё РЅР° РјР°СЃСЃРёРІ 
 }
 
 template <typename T> void Odd(T*& array, T*& odd, int& size, int& oddSize)
