@@ -2,16 +2,14 @@
 using namespace std;
 
 int otherArraySize;
-void FillRand(int* const array, int const size);
-void DisplayMatrix(int* array, int squareSize);
-void PushBack(int*& array, int& size, int value);
-void PushFront(int*& array, int& size, int value);
-void PopBack(int*& array, int& size);
-void PopFront(int*& array, int& size);
-void Insert(int*& array, int& size, int index, int value);
-void Erase(int*& array, int& size, int index);
-
-
+template <typename T> void FillRand(T* const array, int const size);
+template <typename T> void DisplayMatrix(T* array, int squareSize);
+template <typename T> void PushBack(T*& array, int& size, int value);
+template <typename T> void PushFront(T*& array, int& size, int value);
+template <typename T> void PopBack(T*& array, int& size);
+template <typename T> void PopFront(T*& array, int& size);
+template <typename T> void Insert(T*& array, int& size, int index, int value);
+template <typename T> void Erase(T*& array, int& size, int index);
 
 int main()
 {
@@ -22,13 +20,13 @@ int main()
     FillRand(mainArray, size);
     DisplayMatrix(mainArray, size);
 
-    PushBack(mainArray, size, 8);
+    PushBack(mainArray, size, 888);
     DisplayMatrix(mainArray, size);
 
-    PushFront(mainArray, size, 8);
+    PushFront(mainArray, size, 888);
     DisplayMatrix(mainArray, size);
 
-    Insert(mainArray, size, 3, 8);  
+    Insert(mainArray, size, 3, 888);  
     DisplayMatrix(mainArray, size);
 
     PopBack(mainArray, size);
@@ -40,11 +38,10 @@ int main()
     Erase(mainArray, size, 0);
     DisplayMatrix(mainArray, size);
 
-
     delete[] mainArray;
 }
 
-void FillRand(int* const  array, int const size)
+template <typename T> void FillRand(T* const  array, int const size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -52,7 +49,7 @@ void FillRand(int* const  array, int const size)
     }
 }
 
-void DisplayMatrix(int* const array, int const size)
+template <typename T> void DisplayMatrix(T* const array, int const size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -61,54 +58,54 @@ void DisplayMatrix(int* const array, int const size)
     cout << "\n";
 }
 
-void PushBack(int*& array, int& size, int value)
+template <typename T> void PushBack(T*& array, int& size, int value)
 {
-    int* newArray = new int[size + 1];
+    T* newArray = new T[size + 1];
     for (int i = 0; i < size; i++) newArray[i] = array[i];
     newArray[size] = value;
     size++;
     delete[] array;
     array = newArray;
 }
-void PushFront(int*& array, int& size, int value)
+template <typename T> void PushFront(T*& array, int& size, int value)
 {
-    int* newArray = new int[size + 1];
+    T* newArray = new T[size + 1];
     for (int i = 1; i < size+1; i++) newArray[i] = array[i-1];
     newArray[0] = value;
     size++;
     delete[] array;
     array = newArray;
 }
-void Insert(int*& array, int& size, int index, int value)
+template <typename T> void Insert(T*& array, int& size, int index, int value)
 {
-    int* newArray = new int[size];
+    T* newArray = new T[size];
     for (int i = 0; i < size; i++) newArray[i] = array[i];
     newArray[index] = value;
     delete[] array;
     array = newArray;
 }
 
-void PopBack(int*& array, int& size)
+template <typename T> void PopBack(T*& array, int& size)
 {
-    int* newArray = new int[size - 1];
+    T* newArray = new T[size - 1];
     for (int i = 0; i < size - 1; i++) newArray[i] = array[i];
     size--;
     delete[] array;
     array = newArray;
 }
 
-void PopFront(int*& array, int& size)
+template <typename T> void PopFront(T*& array, int& size)
 {
-    int* newArray = new int[size - 1];
+    T* newArray = new T[size - 1];
     for (int i = 1; i < size ; i++) newArray[i-1] = array[i];
     size--;
     delete[] array;
     array = newArray;
 }
 
-void Erase(int*& array, int& size, int index)
+template <typename T> void Erase(T*& array, int& size, int index)
 {
-    int* newArray = new int[size];
+    T* newArray = new T[size];
     for (int i = 0; i < size; i++) newArray[i] = array[i];
     newArray[index] = 0;
     delete[] array;

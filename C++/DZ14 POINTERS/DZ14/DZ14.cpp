@@ -3,11 +3,11 @@
 using namespace std;
 
 int otherArraySize = 0;
-void FillRand(int* const array, int const size);
-void DisplayMatrix(int* array, int squareSize);
-void Even(int*& array, int*& even, int& size, int& evenSize);
-void Odd(int*& array, int*& even, int& size, int& oddSize);
-void DeleteDynamicArray(int* array); //(1) не знаю удаляется ли массив если его загнать в метод
+template <typename T> void FillRand(T*  array, int  size);
+template <typename T> void DisplayMatrix(T* array, int squareSize);
+template <typename T> void Even(T*& array, T*& even, int& size, int& evenSize);
+template <typename T> void Odd(T*& array, T*& even, int& size, int& oddSize);
+template <typename T>  void DeleteDynamicArray(T* array); //(1) не знаю удаляется ли массив если его загнать в метод
 
 int main()
 {
@@ -27,8 +27,7 @@ int main()
     Even(mainArray, evenArray, size, dynamicArraySize);
     DisplayMatrix(evenArray, dynamicArraySize); // Здесь evenArray уже ссылается на новый массив в куче.
     cout << endl;
-    
-    
+      
     Odd(mainArray, oddArray, size, dynamicArraySize);
     DisplayMatrix(oddArray, dynamicArraySize);
     cout << endl;
@@ -38,7 +37,7 @@ int main()
     delete[] oddArray;
 }
 
-void FillRand(int* const  array, int const size)
+template <typename T> void FillRand(T* array, int  size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -46,7 +45,7 @@ void FillRand(int* const  array, int const size)
     }
 }
 
-void DisplayMatrix(int* const array, int const size)
+template <typename T> void DisplayMatrix(T* const array, int const size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -56,7 +55,7 @@ void DisplayMatrix(int* const array, int const size)
 }
 
 //работаем со ссылками, позволяет вернуть из метода множество значений
-void Even(int*& array, int*& even, int& size, int& evenSize) 
+template <typename T> void Even(T*& array, T*& even, int& size, int& evenSize)
 {
     int matchCounter = 0;
     for (int i = 0; i < size; i++)
@@ -66,7 +65,7 @@ void Even(int*& array, int*& even, int& size, int& evenSize)
             matchCounter++;
         }
     }
-    int* evenTemp = new int[matchCounter];
+    T* evenTemp = new T[matchCounter];
     matchCounter = 0;
     for (int i = 0; i < size; i++)
     {
@@ -81,7 +80,7 @@ void Even(int*& array, int*& even, int& size, int& evenSize)
     even = evenTemp; // перезапись ссылки на массив 
 }
 
-void Odd(int*& array, int*& odd, int& size, int& oddSize)
+template <typename T> void Odd(T*& array, T*& odd, int& size, int& oddSize)
 {
     int matchCounter = 0;
     for (int i = 0; i < size; i++)
@@ -91,7 +90,7 @@ void Odd(int*& array, int*& odd, int& size, int& oddSize)
             matchCounter++;
         }
     }
-    int* oddTemp = new int[matchCounter];
+    T* oddTemp = new T[matchCounter];
     matchCounter = 0;
     for (int i = 0; i < size; i++)
     {
