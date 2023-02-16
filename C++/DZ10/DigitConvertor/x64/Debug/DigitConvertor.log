@@ -1,0 +1,3 @@
+﻿  DigitConvertor.cpp
+E:\Science\AcademyStep\C++\Repos\DZ10\DigitConvertor\DigitConvertor.cpp(42,5): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  DigitConvertor.vcxproj -> E:\Science\AcademyStep\C++\Repos\DZ10\x64\Debug\DigitConvertor.exe

@@ -1,0 +1,7 @@
+﻿  GeometricShapesPro.cpp
+E:\Science\AcademyStep\C++\Repos\DZ9\GeometricShapes\GeometricShapesPro.cpp(12,12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+E:\Science\AcademyStep\C++\Repos\DZ9\GeometricShapes\GeometricShapesPro.cpp(60,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Science\AcademyStep\C++\Repos\DZ9\GeometricShapes\GeometricShapesPro.cpp(66,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Science\AcademyStep\C++\Repos\DZ9\GeometricShapes\GeometricShapesPro.cpp(66,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Science\AcademyStep\C++\Repos\DZ9\GeometricShapes\GeometricShapesPro.cpp(66,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GeometricShapes.vcxproj -> E:\Science\AcademyStep\C++\Repos\DZ9\x64\Debug\GeometricShapes.exe

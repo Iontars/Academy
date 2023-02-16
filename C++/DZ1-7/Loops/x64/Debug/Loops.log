@@ -1,0 +1,6 @@
+﻿  Loops.cpp
+E:\Science\AcademyStep\C++\Repos\DZ2\Loops\Loops.cpp(23,13): warning C4834: discarding return value of function with 'nodiscard' attribute
+E:\Science\AcademyStep\C++\Repos\DZ2\Loops\Loops.cpp(54,13): warning C4834: discarding return value of function with 'nodiscard' attribute
+E:\Science\AcademyStep\C++\Repos\DZ2\Loops\Loops.cpp(82,13): warning C4834: discarding return value of function with 'nodiscard' attribute
+E:\Science\AcademyStep\C++\Repos\DZ2\Loops\Loops.cpp(87,13): warning C4834: discarding return value of function with 'nodiscard' attribute
+  Loops.vcxproj -> E:\Science\AcademyStep\C++\Repos\DZ2\x64\Debug\Loops.exe

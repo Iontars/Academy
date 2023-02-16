@@ -1,0 +1,4 @@
+﻿  Matrix.cpp
+E:\Science\AcademyStep\C++\Repos\METHODS\Matrix\Matrix.cpp(18,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+E:\Science\AcademyStep\C++\Repos\METHODS\Matrix\Matrix.cpp(20,9): warning C4101: 'det': unreferenced local variable
+  Matrix.vcxproj -> E:\Science\AcademyStep\C++\Repos\METHODS\x64\Debug\Matrix.exe
